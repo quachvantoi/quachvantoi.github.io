@@ -1,0 +1,717 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.index2 {
+    z-index: 2;
+}
+
+/* Menu trái */
+.body_left {
+    width: 175px;
+    height: 100vh;
+    background-color: #060716;
+    display: inline;
+    float: left;
+    position: relative;
+}
+
+.logo {
+    width: 100%;
+    height: 70px;
+    position: relative;
+}
+
+.logo a,
+.menu_mini a {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+
+}
+
+.logo a {
+    width: 125px;
+    font-weight: bold;
+}
+
+.logo a i,
+.menu_mini a i {
+    float: left;
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.menu_mini {
+    width: 100%;
+    height: 50px;
+    position: relative;
+
+}
+
+.menu_mini a,
+.menu_mini a i {
+    font-size: 17px;
+    color: #78797b;
+}
+
+.menu_mini:hover a,
+.menu_mini:hover a i {
+    color: white;
+}
+
+.menu_mini.active a,
+.menu_mini.active a i {
+    color: white;
+}
+
+
+/* phần bên phải */
+.body_right {
+    float: left;
+    width: calc(100% - 190px);
+    height: calc(100vh - 15px);
+    background-color: #161722;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.header {
+    position: relative;
+}
+
+.search {
+    width: 470px;
+    height: 40px;
+    float: left;
+    border: solid 2px white;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.search_input {
+    width: calc(100% - 100px);
+    height: 100%;
+    float: left;
+    border: none;
+    background: transparent;
+    color: white;
+}
+
+.search_input:focus-visible {
+    outline: none;
+}
+
+.btn_search {
+    width: 100px;
+    height: 41px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: -2px;
+    cursor: pointer;
+}
+
+.btn_search button {
+    background: transparent;
+    border: none;
+    color: white;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.search:hover .btn_search {
+    background: white;
+    color: black;
+}
+
+.search:hover .btn_search button {
+    color: black;
+}
+
+.menu_rigth {
+    float: right;
+    margin-top: 10px;
+}
+
+.menu_item {
+    float: left;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.menu_item a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.menu_item:hover a {
+    color: red;
+}
+
+.sub_menu {
+    display: none;
+    padding: 0 5px;
+    background-color: rgba(47, 48, 53, .9);
+    position: absolute;
+    /* sử dụng js tính left = 1/2 width */
+    left: -50%;
+    border-radius: 5px;
+    transform: scaleY(0);
+
+}
+
+.menu_item:hover .sub_menu,
+.menu_item:hover .sub_menu a {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: max-content;
+}
+
+.menu_item:hover .sub_menu {
+    animation: show-nemu 0.1s ease-out forwards;
+}
+
+@keyframes show-nemu {
+    from {
+        top: -50%;
+        transform: scaleY(0);
+    }
+
+    to {
+        top: 45px;
+        transform: scaleY(1);
+    }
+}
+
+.menu_item.bdwhite {
+    border: solid 2px white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    position: relative;
+    top: -5px;
+    box-shadow: -3px 0 0 0 rgb(27, 216, 249),
+        3px 0 0 0 rgb(255, 76, 63);
+}
+
+.menu_item.bdwhite:hover {
+    animation: post_video .5s ease-in-out;
+}
+
+@keyframes post_video {
+    0% {
+        border: solid 2px white;
+        box-shadow: -3px 0 0 0 rgb(27, 216, 249),
+            3px 0 0 0 rgb(255, 76, 63);
+    }
+
+    50% {
+        border-left: solid 5px white;
+        border-right: solid 5px white;
+        box-shadow: none;
+    }
+
+    100% {
+        border: solid 2px white;
+        box-shadow: -3px 0 0 0 rgb(27, 216, 249),
+            3px 0 0 0 rgb(255, 76, 63);
+    }
+}
+
+.menu_item.btn_login {
+    background: red;
+    padding: 10px 25px;
+    margin-top: -7px;
+    border-radius: 10px;
+}
+
+.menu_item.btn_login:hover {
+    background: #dc0000;
+}
+
+.menu_item.btn_login:hover a {
+    color: white;
+}
+
+.world_line {
+    height: 55px;
+    border-bottom: solid 1px #4b4b4b;
+    width: 110%;
+    transform: translateX(-5%);
+    z-index: 1;
+    position: relative;
+}
+
+.show-video {
+    height: 630px;
+    margin: 20px 40px 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-image: url('image/nokia.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.glass {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 1rem 0 rgb(0 0 0 / 20%);
+    border-radius: 5px;
+    background-color: rgba(0 0 0 / 30%);
+    backdrop-filter: blur(18px);
+}
+
+.show-video video {
+    height: calc(100% - 30px);
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #03a9f4;
+    mix-blend-mode: overlay;
+}
+
+.decription_video {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+}
+
+.decription_video a.name_chanel {
+    text-decoration: none;
+    color: white;
+    font-size: 1.25vw;
+    font-weight: bold;
+}
+
+.decription_video a.name_chanel:hover {
+    color: red;
+}
+
+.decription_video .content_video {
+    color: white;
+    font-size: 18px;
+}
+
+input#progress {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+input#progress:hover,
+input#progress:hover::-webkit-slider-thumb {
+    height: 10px;
+}
+
+
+
+input#progress::-webkit-slider-runnable-track {
+    background: linear-gradient(#666666, #666666) 0/var(--sx) 100% no-repeat, #404040;
+}
+
+input#progress::-ms-fill-lower {
+    height: 1em;
+    border-radius: 0.5em 0 0 0.5em;
+    margin: -undefined 0 -undefined -undefined;
+    background: #666666;
+    border: none;
+    border-right-width: 0;
+}
+
+input#progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 6px;
+    background-color: red;
+    cursor: pointer;
+}
+
+
+
+.float_left {
+    float: left;
+}
+
+.float_right {
+    float: right;
+}
+
+.play_time {
+    position: absolute;
+    bottom: 4px;
+    left: 25px;
+    color: white;
+    font-size: 18px;
+}
+
+.play_time i,
+.play_time p {
+    margin-right: 10px;
+}
+
+.control_video {
+    position: absolute;
+    bottom: 4px;
+    right: 25px;
+    color: white;
+    font-size: 14px;
+}
+
+/* ------------------------------------------- */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: gray;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: red;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* ------------------------------------------- */
+
+.control_video i,
+.control_video .speed {
+    margin-right: 15px;
+}
+
+.control_video i:hover,
+.control_video .speed:hover {
+    color: red;
+}
+
+.speed_video,
+.volume_video {
+    position: relative;
+    width: 40px;
+    text-align: center;
+}
+
+.speed_video select {
+    width: 75px;
+    height: 170px;
+    position: absolute;
+    top: -180px;
+    left: -50%;
+    background: #161722;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible !important;
+}
+
+#value_volume {
+    position: absolute;
+    top: 0;
+    left: -130%;
+    transform: rotate(-90deg) translateX(60%);
+    visibility: hidden;
+}
+
+option {
+    margin-bottom: 5px;
+}
+
+option:hover {
+    color: rgb(247, 32, 32);
+}
+
+option:checked {
+    background-color: #161722;
+    color: red;
+}
+
+
+.orther_interactions {
+    position: absolute;
+    bottom: 60px;
+    right: 25px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.img_avatar {
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+img.avatar {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+img.avatar:hover {
+    scale: 1.2;
+}
+
+.a_plus {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 1s;
+}
+
+.a_plus:hover {
+    transform: translateX(-50%) rotate(360deg);
+}
+
+.orther_interactions i {
+    margin: 30px 0 15px 0;
+}
+
+.orther_interactions .animate_interactions:hover i,
+.orther_interactions i:hover {
+    animation: animate_follow_video 0.8s linear forwards;
+}
+
+@keyframes animate_follow_video {
+    0% {
+        transform: scale(1.5);
+    }
+
+    35% {
+        transform: scale(1.5) rotate(45deg);
+    }
+
+    70% {
+        transform: scale(1.5) rotate(-45deg);
+    }
+
+    100% {
+        transform: scale(1.5) rotate(0);
+    }
+}
+
+.like_active {
+    color: red;
+}
+
+.follow_active {
+    color: yellow;
+}
+
+.btn_play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    font-size: 50px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.zoom_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video_next {
+    height: 630px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    background-image: url(image/nokia.png);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    transform: translateY(140%);
+}
+
+.video_previous {
+    height: 630px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    background-image: url(image/nokia.png);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    transform: translateY(-140%);
+}
+
+.animate_previous_video {
+    animation: previous_video .5s;
+}
+
+@keyframes previous_video {
+    0% {
+        transform: translateY(0%);
+    }
+
+    20% {
+        transform: translateY(20%);
+    }
+
+    40% {
+        transform: translateY(40%);
+    }
+
+    60% {
+        transform: translateY(60%);
+    }
+
+    80% {
+        transform: translateY(80%);
+    }
+
+    99% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+
+}
+
+.animate_next_video {
+    animation: next_video .5s;
+}
+
+@keyframes next_video {
+    0% {
+        transform: translateY(0%);
+    }
+
+    20% {
+        transform: translateY(-20%);
+    }
+
+    40% {
+        transform: translateY(-40%);
+    }
+
+    60% {
+        transform: translateY(-60%);
+    }
+
+    80% {
+        transform: translateY(-80%);
+    }
+
+    99% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+
+}

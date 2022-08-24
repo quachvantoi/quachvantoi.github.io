@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok</title>
+    <link rel="icon" href="image/logo_tiktok.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+</head>
+
+<body>
+    <div class="body_left index2">
+        <!-- logo tiktok -->
+        <div class="logo">
+            <a href=""><i class="fab fa-tiktok"></i>TikTok</a>
+        </div>
+
+        <!-- phần menu -->
+        <div class="menu">
+            <!-- menu thành phần -->
+            <div class="menu_mini active">
+                <a href=""><i class="fa-solid fa-house"></i>HOME</a>
+            </div>
+
+            <!-- menu thành phần -->
+            <div class="menu_mini">
+                <a href=""><i class="fa-solid fa-thumbs-up"></i>Hot Trend</a>
+            </div>
+
+            <!-- menu thành phần -->
+            <div class="menu_mini">
+                <a href=""><i class="fa-solid fa-video"></i>Streaming</a>
+            </div>
+
+            <!-- menu thành phần -->
+            <div class="menu_mini">
+                <a href=""><i class="fa-solid fa-clapperboard"></i>Movie</a>
+            </div>
+
+            <!-- menu thành phần -->
+            <div class="menu_mini">
+                <a href=""><i class="fa-solid fa-virus-covid"></i>Covid</a>
+            </div>
+        </div>
+    </div>
+    <div class="body_right">
+
+        <!-- header -->
+        <div class="header index2">
+
+            <!-- tìm kiếm -->
+            <div class="search">
+                <input type="text" class="search_input" placeholder="Search...">
+                <div class="btn_search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <button>search</button>
+                </div>
+            </div>
+
+            <!-- menu rigth -->
+            <div class="menu_rigth">
+                <div class="menu_item">
+                    <a href="">About</a>
+                    <!-- <div class="sub_menu">
+                        <a href="">Douyin Open Platform</a>
+                    </div> -->
+                </div>
+
+                <div class="menu_item">
+                    <a href="">Download Douyin</a>
+                </div>
+
+                <div class="menu_item">
+                    <a href="">Creator Services</a>
+                </div>
+
+                <div class="menu_item bdwhite">
+                    <a href="">Post video</a>
+                </div>
+
+                <div class="menu_item btn_login">
+                    <a href="">Login</a>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+        <div class="world_line"></div>
+
+
+        <div class="show-video">
+            <div class="glass"></div>
+            <div class="decription_video index2">
+                <a href="" class="name_chanel">@库库</a>
+                <p class="content_video">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <input id="progress" class="progress index2" type="range" value="0" step="1" min="0" max="100">
+            <div class="play_time index2">
+                <div class="play_vid">
+                    <i class="fa-solid fa-play float_left"></i>
+                    <p class="float_left">00:00</p>
+                    <p class="float_left">/</p>
+                    <p class="float_left">04:15</p>
+                </div>
+
+            </div>
+            <div class="control_video index2">
+                <p class="float_left">Auto Replay</p>
+                <label class="switch float_left">
+                    <input type="checkbox" id="Auto_Replay">
+                    <span class="slider round"></span>
+                </label>
+                <div class="speed_video float_left">
+                    <p class="speed">Speed</p>
+                    <select size="8">
+                        <option value="0.25">0.25x</option>
+                        <option value="0.5">0.5x</option>
+                        <option value="0.75">0.75x</option>
+                        <option value="1">1x</option>
+                        <option value="1.25">1.25x</option>
+                        <option value="1.5">1.5x</option>
+                        <option value="1.75">1.75x</option>
+                        <option value="2">2x</option>
+                    </select>
+                </div>
+                <div class="volume_video float_left">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <input id="value_volume" class="progress index2" type="range" value="0" step="1" min="0" max="100">
+                </div>
+                <i class="fa-solid fa-expand float_left zoom_screen_web"></i>
+                <!-- <i class="fa-solid fa-compress float_left"></i> -->
+                <i class="fa-solid fa-maximize float_left zoom_f11"></i>
+                <!-- <i class="fa-solid fa-minimize float_left"></i> -->
+            </div>
+            <div class="orther_interactions index2">
+                <div class="img_avatar">
+                    <a href="#">
+                        <img src="image/avata1.jpeg" alt="avatar" class="avatar">
+                        <div class="a_plus">+</div>
+                    </a>
+                </div>
+                <div class="like_video animate_interactions">
+                    <i class="fa-solid fa-heart"></i>
+                    <p>49.8w</p>
+                </div>
+                <div class="comment_video animate_interactions">
+                    <i class="fa-solid fa-comment-dots"></i>
+                    <p>3.5w</p>
+                </div>
+                <div class="following_video animate_interactions">
+                    <i class="fa-solid fa-star"></i>
+                    <p>2.9w</p>
+                </div>
+                <i class="fa-solid fa-share share_video"></i>
+            </div>
+            <div class="btn_play index2">
+                <i class="fa-solid fa-play"></i>
+            </div>
+            <video src="video/xichdu.mp4" name="media"></video>
+
+            <div class="video_previous"></div>
+            <div class="video_next"></div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
