@@ -38,6 +38,7 @@ const app = {
     speed: 1,
     volume: 100,
     can_play_video_if_scroll: true,
+    space_is_play: false,
     play_list: [{
         name_chanel: '@test',
         url_chaner: 'https://www.douyin.com/user/MS4wLjABAAAApbDcjk1aeuB_D3pNRzmbpnJN01Fl1GBG_fxjxguWsfIWHEbDuFE90cDZa-e7Ue_t?vid=7128307066879380769',
@@ -274,7 +275,7 @@ const app = {
                 }
             }
         }
-        let number_space = false
+
         window.onkeyup = (e) => {
             value_volume.classList.remove("visible")
             speed.children[1].classList.remove("visible")
@@ -290,9 +291,8 @@ const app = {
                     break;
                 case 32:
                     // space
-                    number_space = !number_space
-                    console.log(number_space);
-                    number_space ? video.play() : video.pause()
+                    app.space_is_play = !app.space_is_play
+                    app.space_is_play ? video.play() : video.pause()
                     break;
                 case 38:
                     // up
@@ -364,6 +364,7 @@ const app = {
 
         video.onplay = () => {
             console.log('video play');
+            this.space_is_play = true
             btn_play_vid.classList.remove('fa-play')
             btn_play_vid.classList.add('fa-pause')
             btn_play_vid_center_video.classList.add('hide')
@@ -387,6 +388,7 @@ const app = {
         // khi video dung hoac ket thuc
         video.onpause = () => {
             console.log('video pause');
+            this.space_is_play = false
             btn_play_vid.classList.add('fa-play')
             btn_play_vid.classList.remove('fa-pause')
             btn_play_vid_center_video.classList.remove('hide')
