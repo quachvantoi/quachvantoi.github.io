@@ -25,6 +25,8 @@ const btn_zoom_screen_web = $('.zoom_screen_web')
 const btn_zoom_max = $('.zoom_f11')
 const video_next = $('.video_next')
 const video_previous = $('.video_previous')
+const show_menu_in_media = $('.media_1024')
+const menu_hide_media = $('.menu_hide')
 
 var setTimeVideo, setValueProgress
 
@@ -234,13 +236,30 @@ const app = {
         }
 
         like_video[0].onclick = (e) => {
-            console.log(this.play_list[app.curentIndex].like);
             app.play_list[app.curentIndex].like = !app.play_list[app.curentIndex].like
             like_video[0].classList.toggle('like_active')
+            let number = like_video[1].textContent
+            if (!isNaN(Number(number))) {
+                if (like_video[0].classList.contains('like_active')) {
+                    like_video[1].textContent = String(Number(number) + 1)
+                }
+                else {
+                    like_video[1].textContent = String(Number(number) - 1)
+                }
+            }
         }
         following_video[0].onclick = (e) => {
             app.play_list[app.curentIndex].follow_chanel = !app.play_list[app.curentIndex].follow_chanel
             following_video[0].classList.toggle('follow_active')
+            let number = following_video[1].textContent
+            if (!isNaN(Number(number))) {
+                if (following_video[0].classList.contains('follow_active')) {
+                    following_video[1].textContent = String(Number(number) + 1)
+                }
+                else {
+                    following_video[1].textContent = String(Number(number) - 1)
+                }
+            }
         }
 
         window.addEventListener('wheel', checkScrollDirection);
@@ -255,17 +274,34 @@ const app = {
                 }
             }
         }
-
+        let number_space = false
         window.onkeyup = (e) => {
             value_volume.classList.remove("visible")
             speed.children[1].classList.remove("visible")
+            console.log(e.keyCode);
             switch (e.keyCode) {
+                case 27:
+                    // esc
+                    // thu nho screen f11 (esc)
+                    document.webkitExitFullscreen()
+                    background_video.classList.remove('zoom_video')
+                    btn_zoom_screen_web.classList.replace('fa-compress', 'fa-expand')
+                    btn_zoom_max.classList.replace('fa-minimize', 'fa-maximize')
+                    break;
+                case 32:
+                    // space
+                    number_space = !number_space
+                    console.log(number_space);
+                    number_space ? video.play() : video.pause()
+                    break;
                 case 38:
+                    // up
                     if (app.can_play_video_if_scroll) {
                         app.previous_video()
                     }
                     break;
                 case 40:
+                    // down
                     if (app.can_play_video_if_scroll) {
                         app.next_video()
                     }
@@ -273,7 +309,9 @@ const app = {
             }
         }
 
-
+        show_menu_in_media.onclick = () => {
+            menu_hide_media.classList.toggle('menu_media_show')
+        }
 
 
     },
@@ -343,7 +381,7 @@ const app = {
 
             setValueProgress = setInterval(setvalueprogress, video.duration * 10 / this.speed)
             function setvalueprogress() {
-                progress.value = Number(progress.value) + 1
+                progress.value = Math.ceil(video.currentTime / (video.duration / 100))
             }
         }
         // khi video dung hoac ket thuc
