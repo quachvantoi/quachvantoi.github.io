@@ -148,6 +148,16 @@ const app = {
                     : ""
             }
         }
+        progress.onmouseover = (e) => {
+            clearInterval(setValueProgress)
+        }
+        progress.onmouseout = (e) => {
+            clearInterval(setValueProgress)
+            setValueProgress = setInterval(setvalueprogress, video.duration * 10 / this.speed)
+            function setvalueprogress() {
+                progress.value = Math.ceil(video.currentTime / (video.duration / 100))
+            }
+        }
 
         progress.onchange = (e) => {
             video.currentTime = e.target.value / 100 * video.duration
@@ -179,7 +189,7 @@ const app = {
 
                 setValueProgress = setInterval(setvalueprogress, video.duration * 10 / this.speed)
                 function setvalueprogress() {
-                    progress.value = Number(progress.value) + 1
+                    progress.value = Math.ceil(video.currentTime / (video.duration / 100))
                 }
                 video.play()
             }
@@ -279,7 +289,6 @@ const app = {
         window.onkeyup = (e) => {
             value_volume.classList.remove("visible")
             speed.children[1].classList.remove("visible")
-            console.log(e.keyCode);
             switch (e.keyCode) {
                 case 27:
                     // esc
