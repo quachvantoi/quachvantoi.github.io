@@ -73,7 +73,6 @@ function refresh_page() {
         this_input.style = ""
         this_input.attributes["data-note"].value = ""
         this_input.attributes["data-topic"].value = ""
-        this_input.attributes["data-number-9-input"].value = ""
         this_span_s.forEach((e) => {
             e.classList.add("none")
         })
