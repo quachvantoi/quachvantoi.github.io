@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <title>Game Sudoku</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="backdround-sudoku">
+        <div class="o_vuong_9">
+            <div class="o_vuong">
+                <input type="number" data-number="a1" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+        </div>
+        <!-- hết 9 ô nhỏ -->
+
+        <div class="o_vuong_9">
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+        </div>
+        <!-- hết 9 ô nhỏ -->
+        <div class="o_vuong_9">
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+        </div>
+        <!-- hết 9 ô nhỏ -->
+        <div class="o_vuong_9">
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+        </div>
+        <!-- hết 9 ô nhỏ -->
+
+        <div class="o_vuong_9">
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+        </div>
+        <!-- hết 9 ô nhỏ -->
+        <div class="o_vuong_9">
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+        </div>
+        <!-- hết 9 ô nhỏ -->
+        <div class="o_vuong_9">
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+        </div>
+        <!-- hết 9 ô nhỏ -->
+
+        <div class="o_vuong_9">
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+        </div>
+        <!-- hết 9 ô nhỏ -->
+        <div class="o_vuong_9">
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+            <div class="o_vuong">
+                <input type="number" data-number="" data-note="" data-topic="" data-number-9-input="">
+                <span class="none">1</span>
+                <span class="none">2</span>
+                <span class="none">3</span>
+                <span class="none">4</span>
+                <span class="none">5</span>
+                <span class="none">6</span>
+                <span class="none">7</span>
+                <span class="none">8</span>
+                <span class="none">9</span>
+            </div>
+            <!-- hết 1 ô -->
+
+        </div>
+        <!-- hết 9 ô nhỏ -->
+
+    </div>
+
+    <div class="Fix-menu-right">
+        <div class="menu-right">
+            <i class="fa-solid fa-angle-right btn-show-menu-right"></i>
+            <i class="fa-solid fa-arrow-right-from-bracket btn_return_menu none"></i>
+            <!-- <i class="fa-solid fa-angle-left"></i> -->
+
+            <!-- menu display 1-->
+            <button class="btn-menu-right unselectable scale-up-center button_menu_display_1 create_new_game"
+                role="button">Create a new
+                game</button>
+            <button class="btn-menu-right unselectable scale-up-center button_menu_display_1"
+                role="button">Laboratory</button>
+            <button class="btn-menu-right unselectable scale-up-center button_menu_display_1"
+                role="button">Setting</button>
+            <button class="btn-menu-right unselectable scale-up-center button_menu_display_1" role="button">Your
+                Achievements</button>
+
+            <!-- menu display 2-->
+            <button class="btn-menu-right unselectable scale-up-center button_menu_display_2 menu_create_game none"
+                role="button" data-level="Easy">Easy</button>
+            <button class="btn-menu-right unselectable scale-up-center button_menu_display_2 menu_create_game none"
+                role="button" data-level="Medium">Medium</button>
+            <button class="btn-menu-right unselectable scale-up-center button_menu_display_2 menu_create_game none"
+                role="button" data-level="Difficult">Difficult</button>
+            <button class="btn-menu-right unselectable scale-up-center button_menu_display_2 menu_create_game none"
+                role="button" data-level="Impossible">Impossible</button>
+            <button
+                class="btn-menu-right unselectable scale-up-center button_menu_display_2 menu_create_game none btn_help_1step"
+                role="button">Please, help me</button>
+            <button
+                class="btn-menu-right unselectable scale-up-center button_menu_display_2 menu_create_game none btn_solve_sudoku"
+                role="button">Solve...</button>
+
+            <!-- <div class="btn-menu-right unselectable">Create a new game</div>
+            <div class="btn-menu-right btn_help_1step unselectable">Please, help me</div>
+            <div class="btn-menu-right btn_solve_sudoku">Solve...</div> -->
+
+        </div>
+    </div>
+
+    <!-- <div class="cloud-recommend">
+        <div class="cloud">
+            <p>hello</p>
+            <div class="arrow-cloud"></div>
+        </div>
+    </div> -->
+
+    <script type="text/javascript" src="Data_topic.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
