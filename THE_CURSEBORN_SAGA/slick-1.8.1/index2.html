@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Slick Playground</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&display=swap"
+    rel="stylesheet">
+
+
+
+
+  <style type="text/css">
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .slider {
+      width: 50%;
+      margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="THE_CHARACTERS" id="THE_CHARACTERS">
+    <div class="Session_header">
+      <p>THE CHARACTERS</p>
+      <div class="line1"></div>
+      <div class="line2"></div>
+    </div>
+
+    <div class="container afich_herro">
+      <div id="mycarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators tree_dot">
+          <li data-target="#mycarousel" data-slide-to="0" class="dot active"></li>
+          <li data-target="#mycarousel" data-slide-to="1" class="dot"></li>
+          <li data-target="#mycarousel" data-slide-to="2" class="dot"></li>
+        </ol>
+
+        <!--Các slide bên trong carousel-inner-->
+        <div class="carousel-inner">
+
+          <!--Slide 1 thiết lập hiện thị đầu tiên .active-->
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-sm-3 info_characters">
+                <img src="images/Layer92.png" alt="hero">
+                <p class="hero_name">STORM</p>
+                <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore</p>
+              </div>
+              <!-- het info_characters -->
+
+              <div class="col-sm-3 info_characters">
+                <img src="images/Layer93.png" alt="hero">
+                <p class="hero_name">CAIM</p>
+                <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod
+                  tempor
+                  incididunt ut labore</p>
+              </div>
+              <!-- het info_characters -->
+
+              <div class="col-sm-3 info_characters">
+                <img src="images/Layer94.png" alt="hero">
+                <p class="hero_name">RONIN</p>
+                <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod
+                  tempor
+                  incididunt ut labore</p>
+              </div>
+              <!-- het info_characters -->
+
+              <div class="col-sm-3 info_characters">
+                <img src="images/Layer95.png" alt="hero">
+                <p class="hero_name">Lady Vale</p>
+                <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod
+                  tempor
+                  incididunt ut labore</p>
+              </div>
+              <!-- het info_characters -->
+            </div>
+          </div>
+
+          <!--Slide 2-->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-sm-3 info_characters">
+                <img src="images/Layer94.png" alt="hero">
+                <p class="hero_name">RONIN</p>
+                <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod
+                  tempor
+                  incididunt ut labore</p>
+              </div>
+              <!-- het info_characters -->
+
+              <div class="col-sm-3 info_characters">
+                <img src="images/Layer95.png" alt="hero">
+                <p class="hero_name">CAIM</p>
+                <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod
+                  tempor
+                  incididunt ut labore</p>
+              </div>
+              <!-- het info_characters -->
+
+              <div class="col-sm-3 info_characters">
+                <img src="images/Layer93.png" alt="hero">
+                <p class="hero_name">STORM</p>
+                <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod
+                  tempor
+                  incididunt ut labore</p>
+              </div>
+              <!-- het info_characters -->
+
+              <div class="col-sm-3 info_characters">
+                <img src="images/Layer92.png" alt="hero">
+                <p class="hero_name">Lady Vale</p>
+                <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod
+                  tempor
+                  incididunt ut labore</p>
+              </div>
+              <!-- het info_characters -->
+            </div>
+          </div>
+          <!--Slide 3-->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-sm-3 info_characters">
+                <img src="images/Layer94.png" alt="hero">
+                <p class="hero_name">RONIN</p>
+                <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod
+                  tempor
+                  incididunt ut labore</p>
+              </div>
+              <!-- het info_characters -->
+
+              <div class="col-sm-3 info_characters">
+                <img src="images/Layer92.png" alt="hero">
+                <p class="hero_name">STORM</p>
+                <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod
+                  tempor
+                  incididunt ut labore</p>
+              </div>
+              <!-- het info_characters -->
+
+              <div class="col-sm-3 info_characters">
+                <img src="images/Layer95.png" alt="hero">
+                <p class="hero_name">Lady Vale</p>
+                <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod
+                  tempor
+                  incididunt ut labore</p>
+              </div>
+              <!-- het info_characters -->
+
+              <div class="col-sm-3 info_characters">
+                <img src="images/Layer93.png" alt="hero">
+                <p class="hero_name">CAIM</p>
+                <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod
+                  tempor
+                  incididunt ut labore</p>
+              </div>
+              <!-- het info_characters -->
+            </div>
+          </div>
+        </div>
+
+        <!-- <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a> -->
+
+
+      </div>
+    </div>
+  </div>
+  <!-- ------------------------------------------------------------------------------- -->
+  <div class="container">
+    <div class="row">
+      <section class="regular slider">
+        <div class="">
+          <img src="images/Layer92.png" alt="hero">
+          <p class="hero_name">STORM</p>
+          <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore</p>
+        </div>
+        <!-- het info_characters -->
+        <div class="">
+          <img src="images/Layer92.png" alt="hero">
+          <p class="hero_name">STORM</p>
+          <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore</p>
+        </div>
+        <!-- het info_characters -->
+        <div class="">
+          <img src="images/Layer92.png" alt="hero">
+          <p class="hero_name">STORM</p>
+          <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore</p>
+        </div>
+        <!-- het info_characters -->
+        <div class="">
+          <img src="images/Layer92.png" alt="hero">
+          <p class="hero_name">STORM</p>
+          <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore</p>
+        </div>
+        <!-- het info_characters -->
+        <div class="">
+          <img src="images/Layer92.png" alt="hero">
+          <p class="hero_name">STORM</p>
+          <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore</p>
+        </div>
+        <!-- het info_characters -->
+        <div class="">
+          <img src="images/Layer92.png" alt="hero">
+          <p class="hero_name">STORM</p>
+          <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore</p>
+        </div>
+        <!-- het info_characters -->
+        <div class="">
+          <img src="images/Layer92.png" alt="hero">
+          <p class="hero_name">STORM</p>
+          <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore</p>
+        </div>
+        <!-- het info_characters -->
+        <div class="">
+          <img src="images/Layer92.png" alt="hero">
+          <p class="hero_name">STORM</p>
+          <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore</p>
+        </div>
+        <!-- het info_characters -->
+        <div class="">
+          <img src="images/Layer92.png" alt="hero">
+          <p class="hero_name">STORM</p>
+          <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore</p>
+        </div>
+        <!-- het info_characters -->
+        <div class="">
+          <img src="images/Layer92.png" alt="hero">
+          <p class="hero_name">STORM</p>
+          <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore</p>
+        </div>
+        <!-- het info_characters -->
+        <div class="">
+          <img src="images/Layer92.png" alt="hero">
+          <p class="hero_name">STORM</p>
+          <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore</p>
+        </div>
+        <!-- het info_characters -->
+        <div class="">
+          <img src="images/Layer92.png" alt="hero">
+          <p class="hero_name">STORM</p>
+          <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore</p>
+        </div>
+        <!-- het info_characters -->
+        <div class="">
+          <img src="images/Layer92.png" alt="hero">
+          <p class="hero_name">STORM</p>
+          <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore</p>
+        </div>
+        <!-- het info_characters -->
+        <div class="">
+          <img src="images/Layer92.png" alt="hero">
+          <p class="hero_name">STORM</p>
+          <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore</p>
+        </div>
+        <!-- het info_characters -->
+        <div class="">
+          <img src="images/Layer92.png" alt="hero">
+          <p class="hero_name">STORM</p>
+          <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore</p>
+        </div>
+        <!-- het info_characters -->
+        <div class="">
+          <img src="images/Layer92.png" alt="hero">
+          <p class="hero_name">STORM</p>
+          <p class="dec_hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore</p>
+        </div>
+        <!-- het info_characters -->
+
+      </section>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="./slick-1.8.1/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function () {
+
+      $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 3
+      });
+
+    });
+  </script>
+
+  <script src="task1.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script> -->
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script> -->
+</body>
+
+</html>

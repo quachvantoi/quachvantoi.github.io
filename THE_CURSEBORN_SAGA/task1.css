@@ -1,0 +1,1238 @@
+@font-face {
+    font-family: MyriadPro-CondIt;
+    src: url(font/FontsFree-Net-MYRIADPRO-CONDIT.ttf);
+}
+
+@font-face {
+    font-family: MyriadPro;
+    src: url(font/MyriadPro-Light.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+.menu_fit_header {
+    width: 99%;
+    height: 106px;
+    /* background-color: #a3a3a385; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    padding-top: 54px;
+    transition: ease 1s;
+}
+
+.bg-top-header {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    padding-top: 104px;
+    background-image: url("images/Layer38.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    font-family: MyriadPro-CondIt;
+    font-size: 30px;
+    font-weight: bold;
+    color: #00a8ff;
+    margin-left: 40px;
+}
+
+.logo:hover {
+    text-decoration: none;
+}
+
+
+
+.menu-header {
+    padding-top: 12px;
+}
+
+.menu {
+    color: white;
+    font-family: MyriadPro;
+    margin: 20px;
+    text-align: center;
+    padding-bottom: 28px;
+    font-weight: 300;
+}
+
+.menu:hover {
+    text-decoration: none;
+    color: rgb(218, 216, 216);
+    border-bottom: 3px solid #0092ff;
+}
+
+.active-menu {
+    border-bottom: 3px solid #0092ff;
+}
+
+p.Night-and-Day {
+    padding-top: 200px;
+    color: #00a5ff;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+p.content-Night-and-Day {
+    padding-top: 10px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19px;
+    line-height: 1.2;
+    text-align: center;
+    font-weight: 300;
+}
+
+.arrow-cicle {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    cursor: pointer;
+}
+
+.cicle {
+    /* position: fixed; */
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 2px solid white;
+    /* z-index: 99; */
+}
+
+.cicle:hover {
+    /* background-color: #0048ff; */
+    border: 3px solid red;
+}
+
+.cicle:hover .btn-next {
+    color: red;
+}
+
+.btn-next {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    /* background-image: url('images/arrow.png');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-the-saga {
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.The-Curseborn-Saga {
+    margin-top: 15px;
+}
+
+.title-saga {
+    text-transform: uppercase;
+    font-size: 34px;
+    font-weight: unset;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px;
+}
+
+.line_saga {
+    background-color: #0096ff;
+    width: 100px;
+    height: 4px;
+    margin-bottom: 30px;
+}
+
+.title-saga strong {
+    font-weight: bold;
+}
+
+.content-saga {
+    width: 450px;
+    height: max-content;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #6c6c6c;
+}
+
+.carousel-inner {
+    cursor: pointer;
+}
+
+.The-Curseborn-Saga button {
+    display: flex;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 3px;
+    margin-top: 25px;
+}
+
+button.btn-saga {
+    width: 200px;
+    background: white;
+    color: #616161;
+    padding: 10px 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+button.btn-saga:hover {
+    background: rgb(218, 37, 37);
+    border: 1px solid rgb(218, 37, 37);
+    color: white;
+}
+
+.The-Curseborn-Saga button:hover {
+    border: 1px solid rgb(218, 37, 37);
+}
+
+button.btn-saga i {
+    padding-right: 10px;
+}
+
+.THE_CHARACTERS {
+    background-image: url('images/Layer42.png');
+    background-size: cover;
+    width: 100%;
+    height: 840px;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Session_header {
+    width: 100%;
+    height: max-content;
+    position: relative;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.Session_header p {
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    color: white;
+    padding-top: 100px;
+    font-weight: lighter;
+}
+
+.line1 {
+    width: 100px;
+    height: 4px;
+    background-color: #00a8ff;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.line2 {
+    width: 70px;
+    height: 4px;
+    background-color: #00a8ff;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.afich_herro {
+    margin-top: 80px;
+}
+
+.info_characters {
+    color: white;
+    text-align: center;
+}
+
+.info_characters img {
+    width: 220px;
+    height: 220px;
+}
+
+.hero_name {
+    margin-top: 22px;
+    margin-bottom: 37px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dec_hero {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.tree_dot {
+    position: absolute !important;
+    bottom: -90px !important;
+}
+
+.carousel-indicators li {
+    width: 9px !important;
+    height: 9px !important;
+    background: white !important;
+    margin-left: 13px !important;
+    list-style-type: none !important;
+    cursor: pointer;
+}
+
+/* .dot {
+    width: 9px;
+    height: 9px;
+    background: white;
+    float: left;
+    margin-left: 13px;
+    list-style-type: none;
+} */
+
+.dot.active {
+    background-color: #00a8ff !important;
+}
+
+.THE_CREW .Session_header p {
+    color: black;
+}
+
+.content_the_crew {
+    margin-top: 100px;
+    margin-bottom: 70px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+.content_the_crew_p {
+    font-style: italic;
+    color: #6c6c6c;
+}
+
+.content_the_crew .btn-saga {
+    margin: 22px auto;
+}
+
+.THE_NOVELLAS {
+    position: relative;
+    background-image: url('images/Layer90.png');
+    width: 100%;
+    height: 580px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.THE_NOVELLAS_ARC {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.arc {
+    width: 300px;
+    height: 100px;
+    border: 1px solid #3e3e3e;
+    color: #cbcbcb;
+    text-align: center;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    margin-left: 37px;
+}
+
+.arc:nth-child(1) {
+    margin-left: 0px;
+}
+
+.arc p {
+    margin: 0;
+}
+
+.black {
+    color: black !important;
+}
+
+.col_filter {
+    width: 100%;
+    margin-top: 112px;
+    margin-bottom: 50px;
+}
+
+.filter {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    float: left;
+}
+
+
+.the_characters {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    float: right;
+}
+
+.img_see_our_world img {
+    width: 260px;
+    height: 240px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    filter: drop-shadow(2px 2px 5px black);
+}
+
+.activeimg {
+    transition: ease 2s;
+}
+
+.The_Characters,
+.conceptual_artwork {
+    cursor: pointer;
+}
+
+a.carousel-control-prev {
+    left: -15%;
+}
+
+a.carousel-control-next {
+    right: -15%;
+}
+
+.active_the_characters {
+    font-weight: bold;
+}
+
+.BAZAAR {
+    background-image: url('images/Layer_90.png');
+    width: 100%;
+    height: 560px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content_bazaar {
+    color: white;
+    margin-top: 100px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.BAZAAR_text {
+    font-weight: 700 !important;
+}
+
+.content_bazaar {
+    color: #808080;
+}
+
+.form_contact {
+    margin-top: 100px;
+}
+
+.btn_send_form {
+    width: 165px;
+    height: 40px;
+    font-size: 16px;
+    float: right;
+}
+
+.Feel_contact {
+    margin-bottom: 100px;
+}
+
+.red_start {
+    color: red;
+}
+
+.footer {
+    width: 100%;
+    height: 90px;
+    background-color: #222;
+}
+
+.footer p {
+    font-size: 12px;
+    color: #b2b2b2;
+    display: inline-block;
+    margin-left: 135px;
+    margin-top: 45px;
+}
+
+.logo_contact {
+    height: 90px;
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+.logo_contact img {
+    width: 33px;
+    height: 33px;
+    margin-right: 13px;
+}
+
+.logo_contact img:last-child {
+    margin-right: 180px;
+}
+
+.wanning {
+    color: red !important;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.view_image {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #5d5d5dd6;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+
+.next,
+.previous {
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    font-size: 35px;
+    color: #cacaca;
+}
+
+.previous {
+    left: 5%;
+}
+
+.close {
+    position: absolute;
+    top: 5%;
+    left: 95%;
+    font-size: 35px;
+    color: #cacaca !important;
+}
+
+.next:hover,
+.previous:hover,
+.close:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.view_image img {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hide_menu {
+    color: black;
+    font-size: 25px;
+    position: fixed;
+    top: 52px;
+    right: 10%;
+    transition: ease-in-out 1s;
+}
+
+.display_unset {
+    display: unset !important;
+}
+
+.display_menu_none {
+    display: none !important;
+}
+
+.form-group label {
+    margin-bottom: 0 !important;
+}
+
+.form-group_next {
+    margin-top: 15px;
+}
+
+
+/* sreen */
+@media screen and (max-width: 1201px) {
+    .menu-header {
+        display: unset;
+    }
+
+    .display_menu_none {
+        display: none !important;
+    }
+
+    .BAZAAR {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .menu-header {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: rgb(0 0 0 / 70%);
+        position: fixed;
+        top: 72px;
+        right: 10%;
+        transition: ease-in-out 1s;
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        width: 175px;
+        justify-content: center;
+    }
+
+    .display_menu_none {
+        display: unset !important;
+        color: white;
+    }
+
+    .info_characters img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .img_see_our_world img {
+        width: 200px;
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .logo {
+        font-size: 25px;
+    }
+
+    .footer p {
+        margin-left: 80px;
+    }
+
+    .img_saga {
+        width: 350px;
+        height: 350px;
+    }
+
+    .img_see_our_world img {
+        width: 160px;
+        height: 140px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .menu_fit_header {
+        width: 100%;
+    }
+
+    .footer p {
+        width: 100% !important;
+        margin-bottom: 0;
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .logo_contact {
+        width: 100%;
+        background-color: #222;
+        margin-right: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo_contact img:last-child {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    /* .THE_NOVELLAS {
+        height: 1100px;
+    } */
+
+    .THE_NOVELLAS_ARC {
+        display: inline;
+    }
+
+    .arc {
+        margin-left: 0px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+
+    .info_characters img {
+        width: 95%;
+        height: 90%;
+    }
+
+    .footer p {
+        margin-left: 71px;
+        width: 35%;
+    }
+
+    .logo {
+        margin-left: 0;
+        font-size: 21px;
+    }
+
+
+    .content-saga {
+        width: 330px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .img_saga {
+        width: 300px;
+        height: 300px;
+    }
+
+    .arc {
+        height: 130px;
+    }
+
+    .slick-dotted.slick-slider {
+        padding-bottom: 30px !important;
+    }
+
+    a.carousel-control-prev {
+        left: -10%;
+    }
+
+    a.carousel-control-next {
+        right: -10%;
+    }
+
+    .footer p {
+        margin-left: 0px;
+    }
+
+    p.Night-and-Day {
+        padding-top: 120px;
+        font-size: 30px;
+    }
+
+    p.content-Night-and-Day {
+        font-size: 15px;
+    }
+
+    .out_img_saga {
+        display: flex;
+        align-items: center;
+    }
+
+    .img_see_our_world .col-sm-3 {
+        flex: 0 0 33%;
+        max-width: 33%;
+    }
+
+    .Session_header p {
+        padding-top: 50px;
+        font-size: 35px;
+    }
+
+    .bg-top-header {
+        height: 560px;
+    }
+
+    .THE_CHARACTERS {
+        height: 720px;
+    }
+
+    .BAZAAR {
+        padding-bottom: 80px;
+    }
+
+    .form_contact {
+        margin-top: 70px;
+    }
+
+    .Feel_contact {
+        margin-bottom: 70px;
+    }
+
+    .col_filter {
+        margin-top: 50px;
+        margin-bottom: 25px;
+        padding: 0 30px;
+    }
+
+    .img_see_our_world img {
+        width: 200px;
+        height: 180px;
+    }
+
+    .THE_NOVELLAS {
+        height: 470px;
+    }
+
+    .next,
+    .close {
+        left: 92%;
+        opacity: 1;
+    }
+
+    .title-saga {
+        font-size: 30px;
+    }
+
+    .slick-slide img {
+        width: 70%;
+    }
+
+    .dec_hero,
+    .content_bazaar,
+    .content_the_crew_p,
+    .container.form_contact {
+        font-size: 13px;
+    }
+
+    .content_the_crew {
+        margin-bottom: 30px;
+    }
+
+    .filter,
+    .the_characters {
+        font-size: 16px;
+    }
+
+    .menu {
+        padding-bottom: 20px;
+    }
+
+    .info-the-saga {
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .img_see_our_world img {
+        width: 160px;
+        height: 140px;
+    }
+}
+
+i.fas.fa-bars.hide_menu.display_menu_none {
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 580px) {
+
+    .content-saga {
+        width: auto;
+    }
+
+    .img_saga {
+        display: none;
+    }
+
+    /* .THE_CHARACTERS {
+        height: 1500px;
+    } */
+
+    .img_see_our_world.activeimg {
+        flex-wrap: wrap;
+    }
+
+    .img_see_our_world img {
+        width: 108%;
+        height: 90%;
+        margin-bottom: 20px;
+    }
+
+    .img_see_our_world .col-sm-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .Session_header p {
+        font-size: 28px;
+    }
+
+    .footer p {
+        margin-left: 0px;
+    }
+
+    p.Night-and-Day {
+        padding-top: 60px;
+        font-size: 25px;
+    }
+
+    p.content-Night-and-Day {
+        font-size: 13px;
+    }
+
+    .title-saga {
+        font-size: 28px;
+    }
+
+    .content-saga {
+        font-size: 11px;
+    }
+
+    button.btn-saga {
+        margin: 0 auto;
+    }
+
+    .line1 {
+        width: 80px;
+    }
+
+    .line2 {
+        width: 50px;
+    }
+
+    .content_the_crew {
+        font-size: 13px;
+    }
+
+    .content_bazaar {
+        font-size: 14px;
+        margin-top: 80px;
+    }
+
+    .slick-slide img {
+        width: 70% !important;
+        margin: 0 auto;
+    }
+
+    .bg-top-header {
+        height: 450px;
+    }
+
+    .THE_CHARACTERS {
+        height: 600px;
+    }
+
+    .content_the_crew {
+        margin-bottom: 25px;
+    }
+
+    .slick-dotted.slick-slider {
+        padding-bottom: 30px;
+    }
+
+    .THE_NOVELLAS {
+        height: 420px;
+    }
+
+    .BAZAAR {
+        padding-bottom: 40px;
+    }
+
+    .Feel_contact {
+        margin-bottom: 50px;
+    }
+
+    .form_contact {
+        margin-top: 35px;
+    }
+
+    .filter {
+        font-size: 16px;
+    }
+
+    .the_characters {
+        font-size: 15px;
+    }
+
+    .hero_name {
+        font-size: 18px;
+    }
+
+    .dec_hero {
+        font-size: 11px;
+    }
+
+    .slick-dotted.slick-slider {
+        padding-bottom: 30px !important;
+    }
+
+    .dec_hero,
+    .content_bazaar,
+    .content_the_crew_p,
+    .container.form_contact {
+        font-size: 11px;
+        padding: 0 10px;
+    }
+
+    .filter,
+    .the_characters {
+        font-size: 14px;
+    }
+
+    .col_filter {
+        margin-top: 35px;
+        margin-bottom: 20px;
+        padding: 0 30px;
+    }
+
+    .arc {
+        height: 100px;
+    }
+
+    .btn_send_form {
+        width: 100px;
+        height: 35px;
+        font-size: 13px !important;
+    }
+
+    .info-the-saga {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .Session_header p {
+        padding-top: 40px;
+    }
+
+    .content_the_crew {
+        margin-top: 80px;
+    }
+
+    .slider {
+        margin: 80px auto;
+    }
+
+    .Feel_contact .Session_header p.black {
+        padding: 30px 20px 0 20px
+    }
+
+    .footer p {
+        padding: 0 10px;
+    }
+
+    .logo_contact img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .arrow-cicle {
+        bottom: 10px;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (max-width: 400px) {}
+
+.bg_fix_parallax {
+    background-image: url("images/Layer38.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.logo_footer {
+    color: white;
+    font-weight: 600;
+}
+
+
+.slider {
+    width: 50%;
+    margin: 100px auto;
+}
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    display: inline;
+    width: 85%;
+    height: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+
+.slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+}
+
+.slick-active {
+    opacity: .5;
+}
+
+.slick-current {
+    opacity: 1;
+}
+
+section.regular.slider {
+    width: 80%;
+}
+
+.slick-active {
+    opacity: 1;
+}
+
+ul.slick-dots li {
+    width: 9px;
+    height: 9px;
+    background: white;
+}
+
+ul.slick-dots li.slick-active {
+    background-color: #00a8ff;
+}
+
+.slick-dotted.slick-slider {
+    padding-bottom: 70px;
+}
+
+.info_characters img {
+    margin: 0 auto;
+}
+
+.img_see_our_world img:hover {
+    scale: 1.1;
+    border: 3px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right bottom, #6a5af9, #f62682);
+    animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        border-image-source: linear-gradient(to right bottom, #6a5af9, #f62682);
+    }
+
+    20% {
+        border-image-source: linear-gradient(to right bottom, #1b80fb, #26f650);
+    }
+
+    40% {
+        border-image-source: linear-gradient(to right bottom, #fb1bf3, #263ef6);
+    }
+
+    60% {
+        border-image-source: linear-gradient(to right bottom, #fb1b1b, #9ff626);
+    }
+
+    80% {
+        border-image-source: linear-gradient(to right bottom, #ddfb1b, #26f629);
+    }
+
+    100% {
+        border-image-source: linear-gradient(to right bottom, #fb1bc3, #f66826);
+    }
+}
+
+.img_saga {
+    filter: drop-shadow(0 0 30px black);
+    transform: translateX(-45px);
+}
+
+.info_characters {
+    margin-top: 30px;
+}
+
+.info_characters:hover img {
+    filter: drop-shadow(0 0 20px white);
+}
+
+.arc:hover {
+    border: 1px solid white;
+}
+
+.img_see_our_world img {
+    filter: drop-shadow(2px 2px 5px black);
+    transition: 0.5s;
+}
+
+.img_see_our_world img:hover {
+    scale: 1.1;
+    border: 3px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right bottom, #6a5af9, #f62682);
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        border-image-source: linear-gradient(to right bottom, #6a5af9, #f62682);
+    }
+
+    20% {
+        border-image-source: linear-gradient(to right bottom, #1b80fb, #26f650);
+    }
+
+    40% {
+        border-image-source: linear-gradient(to right bottom, #fb1bf3, #263ef6);
+    }
+
+    60% {
+        border-image-source: linear-gradient(to right bottom, #fb1b1b, #9ff626);
+    }
+
+    80% {
+        border-image-source: linear-gradient(to right bottom, #ddfb1b, #26f629);
+    }
+
+    100% {
+        border-image-source: linear-gradient(to right bottom, #fb1bc3, #f66826);
+    }
+}

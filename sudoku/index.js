@@ -13,6 +13,7 @@ const button_menu_display_2 = document.querySelectorAll(".button_menu_display_2"
 const btn_create_new_game = document.querySelector(".create_new_game")
 const menu_create_game = document.querySelectorAll(".menu_create_game")
 const btn_return_menu = document.querySelector(".btn_return_menu")
+const btn_Laboratory = document.querySelector(".Laboratory")
 // lưu theo hàng ngang
 var topic_sudoku = data.Impossible[Math.floor(Math.random() * data.Impossible.length)]
 // const topic_sudoku = [
@@ -66,6 +67,9 @@ menu_create_game.forEach((e) => {
         show_topic()
     }
 })
+btn_Laboratory.onclick = () => {
+    refresh_page()
+}
 function refresh_page() {
     thuc_hien_forEach(input_row, (input_9, input_1, key_9, key_1, row, col) => {
         let this_input = input_1.querySelector("input")
@@ -73,6 +77,7 @@ function refresh_page() {
         this_input.style = ""
         this_input.attributes["data-note"].value = ""
         this_input.attributes["data-topic"].value = ""
+        this_input.value = ""
         this_span_s.forEach((e) => {
             e.classList.add("none")
         })
