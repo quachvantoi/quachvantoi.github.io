@@ -1,4 +1,5 @@
 // data_topic is data question sudoku
+const body = document.querySelector("body")
 const backdround_sudoku = document.querySelector(".backdround-sudoku")
 const tat_ca_o_vuong_9 = document.querySelectorAll(".o_vuong_9")
 const tat_ca_o_vuong_1 = document.querySelectorAll(".o_vuong")
@@ -13,30 +14,73 @@ const button_menu_display_2 = document.querySelectorAll(".button_menu_display_2"
 const btn_create_new_game = document.querySelector(".create_new_game")
 const menu_create_game = document.querySelectorAll(".menu_create_game")
 const btn_return_menu = document.querySelector(".btn_return_menu")
-const btn_Laboratory = document.querySelector(".Laboratory")
+// const btn_Laboratory = document.querySelector(".Laboratory")
+const btn_Setting = document.querySelector(".Setting")
+const btn_Your_Achievements = document.querySelector(".Your_Achievements")
+
+
+const btn_close_table_solve = document.querySelector(".btn_close")
+const table_menu_3 = document.querySelector(".menu_3")
+const menu_3 = document.querySelector(".step")
+const btn_oke = document.querySelector(".btn_oke")
+const btn_cancer = document.querySelector(".btn_cancer")
+const glass = document.querySelector(".glass")
+const your_win = document.querySelector(".your_win")
+
+const image_setting = document.querySelectorAll(".image_setting img")
+const your_achievements = document.querySelector(".your_achievements")
+
+
+
+var level = "Impossible"
+
+//tạo biến lưu local
+if (!localStorage.background_image) {
+    localStorage.background_image = "image/background-1.jpg"
+}
+else {
+    body.style.backgroundImage = `url(${localStorage.background_image})`
+}
+// localStorage.clickcount = Number(localStorage.clickcount)+1;
+
+if (!localStorage.complete_easy) {
+    localStorage.complete_easy = 0
+}
+if (!localStorage.complete_medium) {
+    localStorage.complete_medium = 0
+}
+if (!localStorage.complete_difficult) {
+    localStorage.complete_difficult = 0
+}
+if (!localStorage.complete_impossible) {
+    localStorage.complete_impossible = 0
+}
+if (!localStorage.use_help) {
+    localStorage.use_help = 0
+}
+if (!localStorage.use_solve) {
+    localStorage.use_solve = 0
+}
+
+
+
 // lưu theo hàng ngang
-var topic_sudoku = data.Impossible[Math.floor(Math.random() * data.Impossible.length)]
+var topic_sudoku = data[level][Math.floor(Math.random() * data[level].length)]
+
+
+
 // const topic_sudoku = [
-//     [3, 7, 0, 0, 0, 0, 0, 9, 0],
-//     [9, 0, 0, 0, 7, 0, 0, 0, 0],
-//     [0, 0, 0, 4, 2, 0, 0, 0, 6],
-//     [0, 0, 1, 0, 8, 4, 2, 0, 0],
 //     [0, 0, 0, 0, 0, 0, 0, 0, 0],
-//     [8, 0, 0, 6, 0, 0, 0, 5, 0],
-//     [0, 0, 6, 0, 0, 2, 0, 1, 0],
-//     [0, 0, 0, 0, 0, 0, 0, 3, 9],
-//     [0, 5, 0, 0, 0, 0, 4, 0, 0],
-// ]
-// const topic_sudoku = [
-//     [0, 5, 0, 0, 2, 0, 0, 0, 0],
-//     [0, 6, 0, 0, 0, 4, 8, 9, 0],
-//     [0, 1, 0, 0, 0, 0, 2, 7, 0],
-//     [0, 0, 6, 9, 0, 0, 0, 3, 0],
-//     [0, 0, 0, 0, 0, 0, 0, 0, 1],
-//     [9, 8, 0, 0, 1, 3, 0, 4, 0],
-//     [0, 7, 0, 2, 0, 5, 4, 6, 0],
-//     [0, 0, 5, 6, 0, 1, 0, 0, 0],
-//     [0, 0, 0, 8, 0, 0, 0, 0, 0]
+//     [0, 0, 0, 0, 0, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0, 0],
+
+//     [0, 0, 0, 0, 0, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0, 0],
+
+//     [0, 0, 0, 0, 0, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0, 0]
 // ]
 btn_create_new_game.onclick = () => {
     button_menu_display_1.forEach((e) => {
@@ -59,17 +103,32 @@ btn_return_menu.onclick = () => {
     btn_return_menu.classList.add("none")
 }
 
+
+//create new game
 menu_create_game.forEach((e) => {
     e.onclick = () => {
-        let level = e.attributes["data-level"].value
+        level = e.attributes["data-level"].value
         refresh_page()
         topic_sudoku = data[level][Math.floor(Math.random() * data[level].length)]
         show_topic()
+        solver_sudoku_fc()
+        wirte_correct_number_input()
+        show_topic()
     }
 })
-btn_Laboratory.onclick = () => {
-    refresh_page()
-}
+
+image_setting.forEach((e) => {
+    e.onclick = () => {
+        let image = e.attributes["src"].value
+        body.style.backgroundImage = `url(${image})`
+        localStorage.background_image = image
+    }
+})
+
+
+// btn_Laboratory.onclick = () => {
+//     refresh_page()
+// }
 function refresh_page() {
     thuc_hien_forEach(input_row, (input_9, input_1, key_9, key_1, row, col) => {
         let this_input = input_1.querySelector("input")
@@ -131,6 +190,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     result_check = Check_numer_corect(value_number, NAME_INPUT_ROW.indexOf(ID_input[0]), ID_input[1], Tung_o_input_div, ID_in_9_input)
                     // console.log(result_check);
 
+                    if (value_number !== O_input.target.attributes["data-number-correct"].value) {
+                        result_check.push(Tung_o_input_div)
+                        // pop_up_wrong_number([], Tung_o_input_div)
+                    }
+
                     if (result_check.length == 0) {
                         // không bị trùng
                         //clear data-note
@@ -187,9 +251,27 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
         Tung_o_input_div.querySelector("input").onchange = (O_input) => {
+            let number = ""
+            if (O_input.target.value === O_input.target.attributes["data-number-correct"].value) {
+                number = O_input.target.value
+            }
             // xoá pop_up_wrong_number
             delete_pop_up_wrong_number(result_check, Tung_o_input_div)
             delete_note(O_input.target.value, Tung_o_input_div)
+
+
+            if (number !== "") {
+                // O_input.target.value = number
+                // O_input.target.attributes["data-note"].value = ""
+                // Tung_o_input_div.querySelectorAll("span").forEach((span_note) => {
+                //     span_note.classList.add("none")
+                // })
+                change_input_number(number, O_input.target.parentElement)
+            }
+
+            //check win game
+            check_win_game()
+
         }
     })
 
@@ -227,6 +309,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         })
+        number_input_current_element.querySelector("input").value = ""
         number_input_current_element.querySelector("input").style.backgroundColor = "white"
         number_input_current_element.querySelector("input").style.opacity = 0.5
 
@@ -319,99 +402,261 @@ document.addEventListener("DOMContentLoaded", function () {
     help_solve_1_step.onclick = () => {
         // kiểm tra có return thì phải dùng và hiện giải thích cách làm
         let number, element_number_change
-        [number, element_number_change] = So_le_an()
-        if (number) {
-            change_input_number(number, element_number_change)
-        }
-
-        [number, element_number_change] = So_Le_hien_nhien()
-        if (number) {
-            change_input_number(number, element_number_change)
-        }
-
-        [element_note_identify, element_note_remove] = Cap_loai_tru()
-
-        [element_note_identify, element_note_remove] = Bo_ba_loai_tru()
-
-        [number_note, current_element_note] = Cap_an()
-
-        [number_note, current_element_note] = Bo_ba_an()
-
-        [number_note, current_corect, curent_remove] = Cap_so_hien_nhien()
-
-        [number_note, current_corect, curent_remove] = Bo_ba_hien_nhien()
-
-
-    }
-    btn_solve_sudoku.onclick = () => {
-        let stop = 0
-        while (stop < 5) {
-            let number, element_number_change
+        let check_1_step = true
+        let check_have_input_empty = document.querySelectorAll(`.o_vuong span:not(.none)`).length
+        let cac_buoc_thuc_hien = []
+        while (check_1_step && check_have_input_empty) {
             [number, element_number_change] = So_le_an()
             if (number) {
+                console.log('so le an');
                 change_input_number(number, element_number_change)
-                stop = 0
+                check_1_step = false
+                cac_buoc_thuc_hien.push({
+                    "Name": "Số lẻ ẩn",
+                    "element_note_identify": number,
+                    "element_note_remove": element_number_change
+                })
+                break
+                // return 0
             }
 
             [number, element_number_change] = So_Le_hien_nhien()
-            if (number) {
+            if (number && check_1_step) {
+                console.log('so le hien nhien');
                 change_input_number(number, element_number_change)
-                stop = 0
+                check_1_step = false
+                cac_buoc_thuc_hien.push({
+                    "Name": "Số lẻ hiển nhiên",
+                    "element_note_identify": number,
+                    "element_note_remove": element_number_change
+                })
+                break
+                // return 0
             }
 
-            [element_note_identify, element_note_remove] = Cap_loai_tru()
-            if (element_note_identify) {
-                // console.log(element_note_identify, element_note_remove);
-                stop = 0
+            block_remove_note: if (check_1_step) {
+                console.log('loai bo ghi chu');
+                [element_note_identify, element_note_remove] = Cap_loai_tru()
+                if (element_note_identify) {
+                    // console.log(element_note_identify, element_note_remove);
+                    cac_buoc_thuc_hien.push({
+                        "Name": "Cặp loại trừ",
+                        "element_note_identify": element_note_identify,
+                        "element_note_remove": element_note_remove
+                    })
+                    break block_remove_note
+                }
+
+                [element_note_identify, element_note_remove] = Bo_ba_loai_tru()
+                if (element_note_identify) {
+                    // console.log(element_note_identify, element_note_remove);
+                    cac_buoc_thuc_hien.push({
+                        "Name": "Bộ ba loại trừ",
+                        "element_note_identify": element_note_identify,
+                        "element_note_remove": element_note_remove
+                    })
+                    break block_remove_note
+                }
+
+                [number_note, current_element_note] = Cap_an()
+                if (number_note) {
+                    cac_buoc_thuc_hien.push({
+                        "Name": "Cặp ẩn",
+                        "element_note_identify": number_note,
+                        "element_note_remove": current_element_note
+                    })
+                    break block_remove_note
+                }
+
+                [number_note, current_element_note] = Bo_ba_an()
+                if (number_note) {
+                    cac_buoc_thuc_hien.push({
+                        "Name": "Bộ ba ẩn",
+                        "element_note_identify": number_note,
+                        "element_note_remove": current_element_note
+                    })
+                    break block_remove_note
+                }
+
+                [number_note, current_corect, curent_remove] = Cap_so_hien_nhien()
+                if (number_note) {
+                    cac_buoc_thuc_hien.push({
+                        "Name": "Cặp số hiển nhiên",
+                        "element_note_identify": number_note,
+                        "element_note_remove": curent_remove,
+                        "element_note_corect": current_corect
+                    })
+                    break block_remove_note
+                }
+
+                [number_note, current_corect, curent_remove] = Bo_ba_hien_nhien()
+                if (number_note) {
+                    cac_buoc_thuc_hien.push({
+                        "Name": "Bộ ba hiển nhiên",
+                        "element_note_identify": number_note,
+                        "element_note_remove": curent_remove,
+                        "element_note_corect": current_corect
+                    })
+                    break block_remove_note
+                }
             }
 
-            [element_note_identify, element_note_remove] = Bo_ba_loai_tru()
-            if (element_note_identify) {
-                // console.log(element_note_identify, element_note_remove);
-                stop = 0
-            }
-
-            [number_note, current_element_note] = Cap_an()
-            if (number_note) {
-                stop = 0
-            }
-
-            [number_note, current_element_note] = Bo_ba_an()
-            if (number_note) {
-                stop = 0
-            }
-
-            [number_note, current_corect, curent_remove] = Cap_so_hien_nhien()
-            if (number_note) {
-                stop = 0
-            }
-
-            [number_note, current_corect, curent_remove] = Bo_ba_hien_nhien()
-            if (number_note) {
-                stop = 0
-            }
-            stop++
+        }
+        console.log(cac_buoc_thuc_hien.pop());
+        check_win_game()
+        localStorage.use_help++
+    }
+    btn_solve_sudoku.onclick = () => {
+        solver_sudoku_fc()
+        if (check_win_game()) {
+            localStorage.use_solve++
         }
 
     }
+    btn_Setting.onclick = () => {
+        table_menu_3.classList.remove("none")
+        image_setting[0].parentElement.classList.remove("none")
+        your_achievements.classList.add("none")
+    }
+    btn_Your_Achievements.onclick = () => {
+        table_menu_3.classList.remove("none")
+        image_setting[0].parentElement.classList.add("none")
+        your_achievements.classList.remove("none")
 
-    function change_input_number(number, element_number_change) {
-        element_number_change.querySelector("input").value = number
-        element_number_change.querySelector("input").attributes["data-note"].value = ""
-        element_number_change.querySelectorAll("span").forEach((span_note) => {
-            span_note.classList.add("none")
-        })
-        delete_note(number, element_number_change)
-        element_number_change.querySelector("input").classList.add("change")
-        setTimeout(() => {
-            element_number_change.querySelector("input").classList.remove("change")
-        }, 1000);
+        your_achievements.innerHTML = `
+                <p>Number of times to pass the challenge:</p>
+                <p>Easy: <strong>${localStorage.complete_easy}</strong></p>
+                <p>Medium: <strong>${localStorage.complete_medium}</strong></p>
+                <p>Difficult: <strong>${localStorage.complete_difficult}</strong></p>
+                <p>Impossible: <strong>${localStorage.complete_impossible}</strong></p>
+                <p>Number of times to use help: <strong>${localStorage.use_help}</strong></p>
+                <p>Number of times to choose the quick prize: <strong>${localStorage.use_solve}</strong></p> `
+    }
+
+    btn_close_table_solve.onclick = () => {
+        table_menu_3.classList.add("none")
+    }
+
+    btn_oke.onclick = () => {
+        //create new game
+        refresh_page()
+        topic_sudoku = data[level][Math.floor(Math.random() * data[level].length)]
+        show_topic()
+
+        your_win.classList.add("none")
+        glass.classList.add("none")
+    }
+    btn_cancer.onclick = () => {
+        your_win.classList.add("none")
+        glass.classList.add("none")
     }
 
 
 
     show_topic()
+    solver_sudoku_fc()
+    wirte_correct_number_input()
+    show_topic()
 }, false);
+
+
+// check win game
+function check_win_game() {
+
+    if (document.querySelectorAll(`.o_vuong span:not(.none)`).length === 0) {
+        console.log('chúc mừng bạn đã vượt qua thử thách');
+        switch (level) {
+            case 'Easy':
+                localStorage.complete_easy++
+                break;
+            case 'Medium':
+                localStorage.complete_medium++
+                break;
+            case 'Difficult':
+                localStorage.complete_difficult++
+                break;
+            case 'Impossible':
+                localStorage.complete_impossible++
+                break;
+        }
+        your_win.classList.remove("none")
+        glass.classList.remove("none")
+        return true
+    }
+}
+
+// ghi ra kết quả cần điền vào ô để check số nhập vào
+function wirte_correct_number_input() {
+    thuc_hien_forEach(input_9x9, (input_9, input_1, key_9, key_1, row, col) => {
+        input_1.querySelector("input").attributes["data-number-correct"].value = input_1.querySelector("input").value
+    })
+}
+
+function solver_sudoku_fc() {
+    let stop = 0
+    while (stop < 5) {
+        let number, element_number_change
+        [number, element_number_change] = So_le_an()
+        if (number) {
+            change_input_number(number, element_number_change)
+            stop = 0
+            // menu_3.innerHTML += `<p>số lẻ ẩn : ${number} ${element_number_change}<p>`
+        }
+
+        [number, element_number_change] = So_Le_hien_nhien()
+        if (number) {
+            change_input_number(number, element_number_change)
+            stop = 0
+        }
+
+        [element_note_identify, element_note_remove] = Cap_loai_tru()
+        if (element_note_identify) {
+            // console.log(element_note_identify, element_note_remove);
+            stop = 0
+        }
+
+        [element_note_identify, element_note_remove] = Bo_ba_loai_tru()
+        if (element_note_identify) {
+            // console.log(element_note_identify, element_note_remove);
+            stop = 0
+        }
+
+        [number_note, current_element_note] = Cap_an()
+        if (number_note) {
+            stop = 0
+        }
+
+        [number_note, current_element_note] = Bo_ba_an()
+        if (number_note) {
+            stop = 0
+        }
+
+        [number_note, current_corect, curent_remove] = Cap_so_hien_nhien()
+        if (number_note) {
+            stop = 0
+        }
+
+        [number_note, current_corect, curent_remove] = Bo_ba_hien_nhien()
+        if (number_note) {
+            stop = 0
+        }
+        stop++
+    }
+}
+
+function change_input_number(number, element_number_change) {
+    element_number_change.querySelector("input").value = number
+    element_number_change.querySelector("input").attributes["data-note"].value = ""
+    element_number_change.querySelectorAll("span").forEach((span_note) => {
+        span_note.classList.add("none")
+    })
+    delete_note(number, element_number_change)
+    element_number_change.querySelector("input").classList.add("change")
+    setTimeout(() => {
+        element_number_change.querySelector("input").classList.remove("change")
+    }, 1000);
+}
+
 
 // show topic
 // thứ tự điền vào theo hàng ngang (input row)
